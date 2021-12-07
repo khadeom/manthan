@@ -1,2 +1,6 @@
 build-essential
 python3-pyaudio
+gcc
+g++
+build-essential
+python3-dev
