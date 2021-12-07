@@ -1,6 +1,4 @@
 speechrecognition
-altair
-pandas
 streamlit
 pyttsx3
 
