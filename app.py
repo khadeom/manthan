@@ -19,9 +19,9 @@ def rec(count):
         print("Speak Anything :")
         # audio = r.listen(source)
         audio= r.record(source,duration=6)
-        name="ans"+str(count)+".wav"
-        with open(name, "wb") as f:
-            f.write(audio.get_wav_data())
+        # name="ans"+str(count)+".wav"
+        # with open(name, "wb") as f:
+        #     f.write(audio.get_wav_data())
         try:
             text = r.recognize_google(audio)
             print("You said : {}".format(text))
