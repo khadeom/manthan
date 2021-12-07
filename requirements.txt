@@ -12,7 +12,6 @@ pandocfilters==1.4.2
 pipreqs==0.4.10
 protobuf==3.16.0
 pyarrow==5.0.0
-PyAudio==0.2.6
 pyparsing==2.4.7
 pyttsx3==2.90
 PyYAML==5.4.1
