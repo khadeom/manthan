@@ -19,9 +19,9 @@ def rec(count):
         print("Speak Anything :")
         # audio = r.listen(source)
         audio= r.record(source,duration=6)
-        # name="ans"+str(count)+".wav"
-        # with open(name, "wb") as f:
-        #     f.write(audio.get_wav_data())
+        name="ans"+str(count)+".wav"
+        with open(name, "wb") as f:
+            f.write(audio.get_wav_data())
         try:
             text = r.recognize_google(audio)
             print("You said : {}".format(text))
@@ -44,16 +44,16 @@ seed_no = datetime.now().hour
 random.seed(seed_no)
 
 
-audio_on = st.sidebar.selectbox("Speech recoginition mode",('off','on'))
+audio_on = st.sidebar.selectbox("Speech recoginition mode",('Start','Stop'))
 
-if audio_on == 'on':
+if audio_on == 'Start':
 
 
-    st.header("Ask chatbot: What should I cook now?(audio mode)")
-    st.text("Recipes originated from user-uploaded content on Food.com")
+    st.header("Audio Bot")
+    st.text("QnA")
     st.code("Please keep your answer within 5 seconds and allow Google 5 seconds to recognize your voice.")
     count=1
-    for i in qna[:4]:
+    for i in qna[:6]:
 
         st.write("Q"+str(count)+". "+i)
         tts(i)
