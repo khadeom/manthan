@@ -53,7 +53,7 @@ if audio_on == 'Start':
     st.text("QnA")
     st.code("Please keep your answer within 5 seconds and allow Google 5 seconds to recognize your voice.")
     count=1
-    for i in qna[]:
+    for i in qna:
 
         st.write("Q"+str(count)+". "+i)
         tts(i)
