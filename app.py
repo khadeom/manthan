@@ -20,6 +20,7 @@ def rec(count):
         # audio = r.listen(source)
         audio= r.record(source,duration=6)
         name="ans"+str(count)+".wav"
+        '''
         with open(name, "wb") as f:
             f.write(audio.get_wav_data())
         try:
@@ -27,6 +28,7 @@ def rec(count):
             print("You said : {}".format(text))
         except:
             print("Sorry could not recognize what you said")
+         '''
     return count+1
 
 
@@ -60,7 +62,7 @@ if audio_on == 'Start':
         st.write("> Are you ready? Speak your answer after 1 second")
         #tts("Are you ready? Speak your answer after 1 second")
         #time.sleep(2)
-        count=rec(count)
+        #count=rec(count)
         print(count)
         # st.write("I see! you like "+liked_ingredients)
         # tts("I see! you like "+liked_ingredients)
